@@ -1,0 +1,19 @@
+.navbar{
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    top: 0;
+    width: 100%;
+    height: var(--navheight);
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar ul li{
+    margin-left: 1rem;
+}
+
