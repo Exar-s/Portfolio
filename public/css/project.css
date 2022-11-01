@@ -1,0 +1,15 @@
+.project-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--marginBot);
+}
+
+.project{
+    max-width: 50rem;
+    overflow: hidden;
+}
+
+.project img{
+    width: 100%;
+}

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./public/css/nav.css">
     <link rel="stylesheet" href="./public/css/about.css">
     <link rel="stylesheet" href="./public/css/home.css">
+    <link rel="stylesheet" href="./public/css/project.css">
     <title>Andy Ni</title>
 </head>
 
@@ -22,73 +23,90 @@
         </ul>
     </nav>
     <section class="home-container">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
         <div class="home-wrapper">
-            <h1>Andy Ni</h1>
-            <h2>Web Developer</h2>
+            <div>
+                <h1>Andy Ni</h1>
+                <h2>Web Developer</h2>
+            </div>
+            <div class="home-img">
+                <div class="home-img-wrapper">
+                    <img src="./public/imgs/rocket1.png" alt="">
+                </div>
+            </div>
         </div>
     </section>
     <section class="about-container">
-        <div>
-            <h2>About Me</h2>
-            <div>
-                <div>
+        <div class="about-wrapper">
+            <h2 class="title">About</h2>
+            <div class="about">
+                <div class="about-text">
                     Hello, I'm Andy Ni, a web developer based in New Yok City
                     <br>
                     <br>
-                    My first encounter with web development was during a capstone 
+                    My first encounter with web development was during a capstone
                     class where I was required to build a fullstack web application.
-                    Up to that point, I have never done web development, but 
-                    throughout the process of the project I started finding a deep interest
-                    in it. 
+                    I have never made a web application up to that point, but it was
+                    because of this project that I found a deep interest in web
+                    development
                     <br>
                     <br>
                     I find enjoyment in learning and incorporating what I learned
-                    into new projects. Building these projects is also a learning experience as
-                    it helps me discover areas that I can improve upon. Currently, 
-                    what I want to do next is to build a 3-4 multiplayer chinese poker 
+                    into new projects and these projects are also a learning experience on
+                    what areas to improve upon. One of the things I
+                    would like to do next is to build a 3-4 multiplayer chinese poker
                     game with in-house rules.
                 </div>
-                <div>
-                    Tools I have worked with
-                    <div>
-                        <img src="./public/imgs/html5.png" alt="">
-                        HTML5
+                <div class="about-tools">
+                    <div class="tools-group">
+                        <div class="tool">
+                            <img src="./public/imgs/html5.png" alt="">
+                            <p>HTML5</p>
+                        </div>
+                        <div class="tool">
+                            <img src="./public/imgs/css3.png" alt="">
+                            <p>CSS3</p>
+                        </div>
+                        <div class="tool">
+                            <img src="./public/imgs/js.png" alt="">
+                            <p>JavaScript</p>
+                        </div>
                     </div>
-                    <div>
-                        <img src="./public/imgs/css3.png" alt="">
-                        CSS3
+                    <div class="tools-group">
+                        <div class="tool">
+                            <img src="./public/imgs/react.png" alt="">
+                            <p>React</p>
+                        </div>
+                        <div class="tool">
+                            <img src="./public/imgs//express.png" alt="">
+                            <p>Express</p>
+                        </div>
+                        <div class="tool">
+                            <img src="./public/imgs/nodejs.png" alt="">
+                            <p>Node.js</p>
+                        </div>
+                        <div class="tool">
+                            <img src="./public/imgs/npm.png" alt="">
+                            <p>NPM</p>
+                        </div>
                     </div>
-                    <div>
-                        <img src="./public/imgs/js.png" alt="">
-                        JavaScript
-                    </div>
-                    <div>
-                        <img src="./public/imgs/react.png" alt="">
-                        React
-                    </div>
-                    <div>
-                        <img src="./public/imgs//express.png" alt="">
-                        Express
-                    </div>
-                    <div>
-                        <img src="./public/imgs/mongodb.png" alt="">
-                        MongoDB
-                    </div>
-                    <div>
-                        <img src="./public/imgs/git.png" alt="">
-                        Git
-                    </div>
-                    <div>
-                        <img src="./public/imgs/sql.png" alt="">
-                        SQL
-                    </div>
-                    <div>
-                        <img src="./public/imgs/nodejs.png" alt="">
-                        Node.js
-                    </div>
-                    <div>
-                        <img src="./public/imgs/npm.png" alt="">
-                        NPM
+                    <div class="tools-group">
+                        <div class="tool">
+                            <img src="./public/imgs/git.png" alt="">
+                            <p>Git</p>
+                        </div>
+                        <div class="tool">
+                            <img src="./public/imgs/sql.png" alt="">
+                            <p>SQL</p>
+                        </div>
+                        <div class="tool">
+                            <img src="./public/imgs/mongodb.png" alt="">
+                            <p>MongoDB</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -96,26 +114,34 @@
     </section>
     <section>
         <div>
-            <h2>Projects</h2>
-            <div>
-                AniDisc
-            </div>
-            <div>
-                Gashapon
-            </div>
-            <div>
-                Daily Tenant
-            </div>
-            <div>
-                Pokedex
-            </div>
-            <div>
-                Weather
+            <h2 class="title">Projects</h2>
+            <div class="project-list">
+                <div class="project">
+                    <img src="./public/imgs/projects/anidisc.PNG" alt="">
+                    AniDisc
+                </div>
+                <div class="project">
+                    <img src="./public/imgs/projects/gashapon.PNG" alt="">
+                    Gashapon
+                </div>
+                <div class="project">
+                    <img src="./public/imgs/projects/daily.PNG" alt="">
+                    Daily Tenant
+                </div>
+                <div class="project">
+                    <img src="./public/imgs/projects/pokedex.png" alt="">
+                    Pokedex
+                </div>
+                <div class="project">
+                    <img src="./public/imgs/projects/weather.jpg" alt="">
+                    Weather
+                </div>
             </div>
         </div>
     </section>
     <section>
-        <h2>Contact</h2>
+        <h2 class="title">Contact</h2>
+        <button>Email</button>
     </section>
 </body>
 

@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
 
 :root{
     --navheight: 3.5rem;
+    --gap: 10rem;
+    --marginBot: 10rem
 }
 
 *,
@@ -14,7 +16,7 @@
 
 body{
     background-color: #212121;
-    background-image: linear-gradient(rgb(0 0 0 /0.5), rgb(0 0 0 /0.5)), url('../imgs/1145374.webp');
+    background-image: linear-gradient(rgb(0 0 0 /0.5), rgb(0 0 0 /0.5)), url('../imgs/night.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -22,8 +24,18 @@ body{
     background-attachment: fixed;
     color: white;
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
 ul, ol{
     list-style-type: none;
+}
+
+.title{
+    text-align: center;
+    font-size: 3rem;
+    width: fit-content;
+    margin: 0 auto 2rem auto;
+    color: rgb(2555 255 255 / 0.9);
+    border-bottom: 1rem solid #0092cc;
 }
