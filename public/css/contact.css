@@ -1,0 +1,50 @@
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    padding: 10rem 0;
+    margin-bottom: var(--marginBot);
+}
+
+.contact {
+    position: relative;
+    display: flex;
+    place-items: center;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.contact svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.contact:hover .contact-copy{
+    display: block;
+}
+
+.contact-copy {
+    display: none;
+    position: absolute;
+    background-color: black;
+    border: 2px solid #0092cc;
+    width: 12ch;
+    text-align: center;
+    bottom: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contact-copy::after{
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-bottom: 10px solid #0092cc;
+}

@@ -8,8 +8,42 @@
 .project{
     max-width: 50rem;
     overflow: hidden;
+    border: 1px solid white;
+    margin-bottom: 5rem;
+    padding: 1rem;
+    border-radius: 5px;
 }
 
 .project img{
     width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.project-info{
+    border-top: 1px solid white;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.project-info .button-container{
+    display: flex;
+}
+
+.project-info button{
+    display: flex;
+    place-items: center;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #0092cc;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    margin: 1rem 1rem 0 0 ;
+}
+
+.project-info button svg{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
 }
