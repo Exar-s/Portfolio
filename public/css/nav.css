@@ -7,13 +7,30 @@
     height: var(--navheight);
     font-size: 1.5rem;
     padding: 1rem;
+    z-index: 999;
+    transition: background-color 0.2s linear;
+}
+
+.navbar.bg{
+    background-color: #313131;
 }
 
 .navbar ul{
     display: flex;
+    position: relative;
 }
 
 .navbar ul li{
     margin-left: 1rem;
+    cursor: pointer;
+}
+
+.navbar .bar{
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 2px;
+    background-color: white;
+    transition: transform 0.2s linear;
 }
 
