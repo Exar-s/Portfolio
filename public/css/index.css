@@ -48,3 +48,86 @@ a{
     color: white;
     text-decoration: none;
 }
+
+/* .modal {
+    display: flex;
+    place-content: center;
+    width: 1000px;
+    margin: auto;
+    border: 0;
+    outline: 0;
+    background-color: #212121;
+    user-select: none;
+}
+
+.modal img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.modal button{
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+}
+
+.modal-close{
+    position: absolute;
+    top: 0px;
+    right: 0;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    height: 2rem;
+    width: 2rem;
+    font-size: 1rem;
+    line-height: 1;
+    border-radius: 50%;
+}
+
+.modal-desc, .modal-page{
+    position: absolute;
+    left: 0;
+    background-color: rgb(0 0 0 / 0.7);
+    padding: 0.3rem 1rem;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+.modal-page{
+    top: 20px;
+}
+
+.modal-desc{
+    bottom: 20px;
+}
+
+.modal-prev,
+.modal-next{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    padding: 0 0.5rem;
+    font-size: 1.5rem;
+}
+
+.modal-prev:hover,
+.modal-next:hover,
+.modal-close:hover{
+    background-color: black;
+}
+
+.modal-prev{
+    left: 0;
+}
+
+.modal-next{
+    right: 0;
+}
+
+.modal::backdrop{
+    background-color: rgb(0 0 0 / 0.9);
+} */

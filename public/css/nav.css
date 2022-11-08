@@ -3,10 +3,10 @@
     display: flex;
     justify-content: flex-end;
     top: 0;
-    width: 100%;
+    width: 100vw;
     height: var(--navheight);
     font-size: 1.5rem;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     z-index: 999;
     transition: background-color 0.2s linear;
 }
