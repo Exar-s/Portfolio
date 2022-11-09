@@ -9,8 +9,7 @@ const navOptions = {
   rootMargin: '-60% 0px -40% 0px',
 };
 
-let clicked = null;
-
+//show nav background after scrolling past home
 const navObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) {
@@ -23,6 +22,9 @@ const navObserver = new IntersectionObserver((entries, observer) => {
 
 navObserver.observe(home);
 
+//prevent nav slider from moving back and forth
+let clicked = null;
+
 function scrollTo(e) {
   document.getElementById(e.target.dataset.sec).scrollIntoView();
   clicked = e.target.dataset.sec;
@@ -32,6 +34,7 @@ navLinks.forEach((link) => {
   link.addEventListener('click', scrollTo);
 });
 
+//Slide nav bar based on in view section
 const navScrollObeserver = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -70,31 +73,32 @@ screenshots.forEach((screenshot) => {
     if (type === 'anidisc') {
       arr = imgCollection.anidisc;
     } else if (type === 'gacha') {
-      arr = imgCollection.gacha
+      arr = imgCollection.gacha;
     } else if (type === 'dailyten') {
-      arr = imgCollection.dailyten
+      arr = imgCollection.dailyten;
     } else if (type === 'pokedex') {
-      arr = imgCollection.pokedex
+      arr = imgCollection.pokedex;
     } else if (type === 'weather') {
-      arr = imgCollection.weather
+      arr = imgCollection.weather;
     }
     currpage = 0;
     totalpage = arr.length;
     changeInner();
-    document.body.style.overflow = 'hidden'
+    document.body.style.overflow = 'hidden';
     modal.classList.add('active');
   });
 });
 
+//change image
 function changeInner() {
-  if(currpage >= totalpage){
-    currpage = 0
-  } else if (currpage < 0){
-    currpage = totalpage - 1
+  if (currpage >= totalpage) {
+    currpage = 0;
+  } else if (currpage < 0) {
+    currpage = totalpage - 1;
   }
   modalPage.innerText = `${currpage + 1}/${totalpage}`;
   modalImg.src = arr[currpage].img;
-  modalDesc.innerText = arr[currpage].desc
+  modalDesc.innerText = arr[currpage].desc;
 }
 
 function changePage(direction) {
@@ -111,5 +115,18 @@ modalNext.addEventListener('click', () => changePage('next'));
 modalPrev.addEventListener('click', () => changePage('prev'));
 modalClose.addEventListener('click', () => {
   modal.classList.remove('active');
-  document.body.style.overflow = "initial"
-})
+  document.body.style.overflow = 'initial';
+});
+
+//Copy to Clipboard
+const contact = document.querySelector('.contact');
+const text = document.querySelector('.contact-context').innerText;
+const copied = document.querySelector('.contact-copy');
+
+contact.addEventListener('click', async () => {
+  navigator.clipboard.writeText(text);
+  copied.innerText = 'Copied';
+  setTimeout(() => {
+    copied.innerText = 'Click to copy';
+  }, 10000);
+});
