@@ -79,3 +79,29 @@
 .project-info button:hover::after {
     height: 50%;
 }
+
+.wait{
+    font-size: 0.7rem;
+    padding: 0.5rem 0;
+    color: red;
+}
+
+@media screen and (max-width: 75em){
+    .project{
+        max-width: 80vw;
+    }
+
+    .project-info button{
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .project-info button svg{
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .project-info .button-container{
+        flex-direction: column;
+    }
+}

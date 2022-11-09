@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
 
-:root{
+:root {
     --navheight: 3.5rem;
     --gap: 10rem;
     --marginBot: 10rem
@@ -14,11 +14,11 @@
     padding: 0;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     background-color: #212121;
     background-image: linear-gradient(rgb(0 0 0 /0.5), rgb(0 0 0 /0.5)), url('../imgs/night.png');
     background-repeat: no-repeat;
@@ -31,11 +31,12 @@ body{
     overflow-x: hidden;
 }
 
-ul, ol{
+ul,
+ol {
     list-style-type: none;
 }
 
-.title{
+.title {
     text-align: center;
     font-size: 3rem;
     width: fit-content;
@@ -44,25 +45,36 @@ ul, ol{
     border-bottom: 1rem solid #0092cc;
 }
 
-a{
+a {
     color: white;
     text-decoration: none;
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
     width: 1rem;
-  }
-  
-  body::-webkit-scrollbar-track{
+}
+
+body::-webkit-scrollbar-track {
     background-color: #212121;
-  }
-  
-  body::-webkit-scrollbar-thumb{
+}
+
+body::-webkit-scrollbar-thumb {
     background-color: #313131;
     border: 2px solid #212121;
     background-clip: content-box;
-  }
-  
-  body::-webkit-scrollbar-thumb:hover{
+}
+
+body::-webkit-scrollbar-thumb:hover {
     background-color: #414141;
-  }
+}
+
+@media screen and (max-width: 75em) {
+    :root {
+        --gap: 1rem
+    }
+
+    .title{
+        font-size: 2rem;
+        border-bottom: 5px solid #0092cc;
+    }
+}

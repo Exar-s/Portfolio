@@ -11,6 +11,10 @@
     transition: background-color 0.2s linear;
 }
 
+.hamburger{
+    display: none;
+}
+
 .navbar.bg{
     background-color: #212121;
 }
@@ -34,3 +38,67 @@
     transition: transform 0.2s linear;
 }
 
+@media screen and (max-width: 75em){
+    .navbar{
+        justify-content: flex-start;
+        padding: 0;
+    }
+    .navbar ul{
+        position: absolute;
+        top: 100%;
+        flex-direction: column;
+        background-color: #212121;
+        padding: 1rem;
+        border-radius: 0 0 10px 10px;
+        transform: scaleY(0);
+        transform-origin: top center;
+        transition: transform 0.2s ease-in;
+    }
+
+    .navbar ul li {
+        margin: 0;
+        text-align: center;
+    }
+
+    .navbar .bar{
+        display: none;
+    }
+
+    .hamburger{
+        display: initial;
+        background-color: transparent;
+        padding: 0 1rem;
+        border: 0;
+        outline: 0;
+        transition: transform 0.2s ease-in;
+    }
+
+    .hambar{
+        width: 40px;
+        height: 5px;
+        background-color: #0092cc;
+        margin-bottom: 5px;
+        transition: transform 0.4s ease-in, opacity 0.2s ease-in;
+    }
+    
+    .navbar.active .hamburger{
+        transform: rotate(45deg);
+        transition-delay: 0.5s;
+    }
+
+    .navbar.active .hambar:nth-child(1){
+        transform: translateY(10px);
+    }
+
+    .navbar.active .hambar:nth-child(2){
+        opacity: 0;
+    }
+
+    .navbar.active .hambar:nth-child(3){
+        transform: translateY(-10px) rotate(90deg);
+    }
+
+    .navbar.active ul{
+        transform: scaleY(1);
+    }
+}

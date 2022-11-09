@@ -48,3 +48,14 @@
     border: 5px solid transparent;
     border-bottom: 10px solid #0092cc;
 }
+
+@media screen and (max-width: 75em){
+    .contact{
+        font-size: 1rem;
+    }
+
+    .contact svg{
+        width: 1rem;
+        height: 1rem;
+    }
+}

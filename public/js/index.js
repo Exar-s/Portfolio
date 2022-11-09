@@ -130,3 +130,15 @@ contact.addEventListener('click', async () => {
     copied.innerText = 'Click to copy';
   }, 10000);
 });
+
+//Navbar hamburger 
+const ham = document.querySelector('.navbar')
+
+ham.addEventListener('click', () => {
+  if(!ham.classList.contains('active')){
+    ham.classList.add('active')
+  } else{
+    console.log(ham.classList.contains('active'))
+    ham.classList.remove('active')
+  }
+})
