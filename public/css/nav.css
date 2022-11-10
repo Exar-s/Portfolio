@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
     position: fixed;
     display: flex;
     justify-content: flex-end;
@@ -11,25 +11,25 @@
     transition: background-color 0.2s linear;
 }
 
-.hamburger{
+.hamburger {
     display: none;
 }
 
-.navbar.bg{
+.navbar.bg {
     background-color: #212121;
 }
 
-.navbar ul{
+.navbar ul {
     display: flex;
     position: relative;
 }
 
-.navbar ul li{
+.navbar ul li {
     margin-left: 1rem;
     cursor: pointer;
 }
 
-.navbar .bar{
+.navbar .bar {
     position: absolute;
     bottom: -10px;
     left: 0;
@@ -38,12 +38,19 @@
     transition: transform 0.2s linear;
 }
 
-@media screen and (max-width: 75em){
-    .navbar{
+.resume {
+    padding: 1rem;
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+@media screen and (max-width: 75em) {
+    .navbar {
         justify-content: flex-start;
         padding: 0;
     }
-    .navbar ul{
+
+    .navbar ul {
         position: absolute;
         top: 100%;
         flex-direction: column;
@@ -55,16 +62,23 @@
         transition: transform 0.2s ease-in;
     }
 
+    .resume {
+        place-content: center;
+        margin-left: 0;
+        padding: 0.5rem;
+        text-align: center;
+    }
+
     .navbar ul li {
         margin: 0;
         text-align: center;
     }
 
-    .navbar .bar{
+    .navbar .bar {
         display: none;
     }
 
-    .hamburger{
+    .hamburger {
         display: initial;
         background-color: transparent;
         padding: 0 1rem;
@@ -73,32 +87,32 @@
         transition: transform 0.2s ease-in;
     }
 
-    .hambar{
+    .hambar {
         width: 40px;
         height: 5px;
         background-color: #0092cc;
         margin-bottom: 5px;
         transition: transform 0.4s ease-in, opacity 0.2s ease-in;
     }
-    
-    .navbar.active .hamburger{
+
+    .navbar.active .hamburger {
         transform: rotate(45deg);
         transition-delay: 0.5s;
     }
 
-    .navbar.active .hambar:nth-child(1){
+    .navbar.active .hambar:nth-child(1) {
         transform: translateY(10px);
     }
 
-    .navbar.active .hambar:nth-child(2){
+    .navbar.active .hambar:nth-child(2) {
         opacity: 0;
     }
 
-    .navbar.active .hambar:nth-child(3){
+    .navbar.active .hambar:nth-child(3) {
         transform: translateY(-10px) rotate(90deg);
     }
 
-    .navbar.active ul{
+    .navbar.active ul {
         transform: scaleY(1);
     }
 }

@@ -68,13 +68,13 @@
         display: flex;
     }
 
-    .tool{
+    .tool {
         width: 4rem;
         height: 4rem;
         position: relative;
     }
 
-    .tool p{
+    .tool p {
         position: absolute;
         top: 100%;
         margin-top: 0.2rem;
@@ -89,18 +89,18 @@
 }
 
 @media screen and (max-width: 32em) {
-    .tools-group:nth-child(2){
+    .tools-group:nth-child(2) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .tool{
+    .tool {
         width: 1rem;
         height: 1rem;
         background-color: transparent;
     }
 
-    .tool p{
+    .tool p {
         display: none;
     }
 }

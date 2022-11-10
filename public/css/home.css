@@ -20,7 +20,7 @@
     font-size: 80px;
 }
 
-.home-wrapper > div{
+.home-wrapper>div {
     width: 400px;
     height: 400px;
 }
@@ -79,91 +79,97 @@
 }
 
 @keyframes shootingStar {
-    0%{
+    0% {
         transform: rotate(-135deg) translateX(0);
         opacity: 0;
     }
-    25%{
+
+    25% {
         opacity: 1;
     }
-    100%{
+
+    100% {
         transform: rotate(-135deg) translateX(-1000px);
         opacity: 0;
     }
 }
 
-.home-container span:nth-child(1){
-    top:50%;
+.home-container span:nth-child(1) {
+    top: 50%;
     left: 0;
     animation-delay: 0s;
     animation-duration: 2s;
 }
 
-.home-container span:nth-child(2){
+.home-container span:nth-child(2) {
     left: 20%;
     animation-delay: 2s;
     animation-duration: 3s;
 }
 
-.home-container span:nth-child(3){
-    top:50%;
+.home-container span:nth-child(3) {
+    top: 50%;
     left: 40%;
     animation-delay: 3s;
     animation-duration: 1.5s;
 }
 
-.home-container span:nth-child(4){
+.home-container span:nth-child(4) {
     left: 60%;
     animation-delay: 5s;
     animation-duration: 2.7s;
 }
 
-.home-container span:nth-child(5){
+.home-container span:nth-child(5) {
     left: 80%;
     animation-delay: 7s;
     animation-duration: 2.3s;
 }
 
 @media screen and (max-width: 75em) {
-    .home-wrapper{
-        margin-top: 20vh;
+    .home-wrapper {
+        margin-top: 10vh;
         place-items: center;
         flex-direction: column;
     }
 
-    .home-wrapper > div:nth-child(1){
+    .home-wrapper>div:nth-child(1) {
         height: 200px;
     }
 
-    .home-wrapper .home-img{
+    .home-wrapper .home-img {
         width: 200px;
         height: 200px;
     }
 
-    .home-img-wrapper img{
+    .home-img-wrapper img {
         width: 1rem;
     }
 }
 
 @media screen and (max-width: 32em) {
-    .home-wrapper h1{
+    .home-wrapper {
+        gap: 2rem;
+    }
+
+    .home-wrapper h1 {
         font-size: 48px;
     }
 
-    .home-wrapper h2{
+    .home-wrapper h2 {
         font-size: 16px;
     }
 
-    .home-wrapper .home-img{
+    .home-wrapper .home-img {
         width: 100px;
         height: 100px;
     }
 
-    .home-wrapper > div:nth-child(1){
+    .home-wrapper>div:nth-child(1) {
         height: 100px;
     }
 
-    .home-img-wrapper img{
+    .home-img-wrapper img {
         width: 10px;
     }
 

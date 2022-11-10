@@ -4,6 +4,7 @@ const nav = document.querySelector('.navbar');
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('li');
 const bar = document.querySelector('.bar');
+const dropDown = document.querySelector('.dropdown');
 
 const navOptions = {
   rootMargin: '-60% 0px -40% 0px',
@@ -49,9 +50,29 @@ const navScrollObeserver = new IntersectionObserver((entries, observer) => {
   });
 }, navOptions);
 
-sections.forEach((section) => {
-  navScrollObeserver.observe(section);
+//wait till load to observer to prevent wrong width values
+window.addEventListener('load', () => {
+  sections.forEach((section) => {
+    navScrollObeserver.observe(section);
+  });
 });
+
+//window resize causes an error to underline width
+//changed from innerwidth to pos incase of users with large font size
+function checkSize() {
+  const pos = getComputedStyle(dropDown).position;
+  if (pos === 'relative') {
+    sections.forEach((section) => {
+      navScrollObeserver.observe(section);
+    });
+  } else if (pos === 'absolute') {
+    sections.forEach((section) => {
+      navScrollObeserver.unobserve(section);
+    });
+  }
+}
+
+window.addEventListener('resize', checkSize);
 
 //Image Modal
 const modal = document.querySelector('.modal-container');
@@ -131,14 +152,20 @@ contact.addEventListener('click', async () => {
   }, 10000);
 });
 
-//Navbar hamburger 
-const ham = document.querySelector('.navbar')
+//Navbar hamburger
+const ham = document.querySelector('.navbar');
 
 ham.addEventListener('click', () => {
-  if(!ham.classList.contains('active')){
-    ham.classList.add('active')
-  } else{
-    console.log(ham.classList.contains('active'))
-    ham.classList.remove('active')
+  if (!ham.classList.contains('active')) {
+    ham.classList.add('active');
+  } else {
+    ham.classList.remove('active');
   }
-})
+});
+
+//Resume
+const resumeBtn = document.querySelector('.resume');
+
+resumeBtn.addEventListener('click', () => {
+  window.open('resume.pdf', '_blank');
+});
