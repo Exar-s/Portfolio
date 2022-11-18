@@ -24,11 +24,12 @@ const navObserver = new IntersectionObserver((entries, observer) => {
 navObserver.observe(home);
 
 //prevent nav slider from moving back and forth
-let clicked = null;
+//Clicking another section too fast causes bar to land on the prev clicked
+// let clicked = null;
 
 function scrollTo(e) {
+  // clicked = e.target.dataset.sec;
   document.getElementById(e.target.dataset.sec).scrollIntoView();
-  clicked = e.target.dataset.sec;
 }
 
 navLinks.forEach((link) => {
@@ -39,11 +40,9 @@ navLinks.forEach((link) => {
 const navScrollObeserver = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      if (clicked && entry.target.id !== clicked) return;
       const page = document.querySelector(`[data-sec='${entry.target.id}']`);
       bar.style.width = page.offsetWidth + 'px';
       bar.style.transform = `translateX(${page.offsetLeft}px)`;
-      clicked = null;
     } else {
       return;
     }
