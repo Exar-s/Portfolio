@@ -58,8 +58,9 @@
         padding: 1rem;
         border-radius: 0 0 10px 10px;
         transform: scaleY(0);
+        opacity: 0;
         transform-origin: top center;
-        transition: transform 0.2s ease-in;
+        transition: transform 0.2s ease-in, opacity 0.2s ease-in;
     }
 
     .resume {
@@ -97,7 +98,7 @@
 
     .navbar.active .hamburger {
         transform: rotate(45deg);
-        transition-delay: 0.5s;
+        transition-delay: 0.3s;
     }
 
     .navbar.active .hambar:nth-child(1) {
@@ -113,6 +114,7 @@
     }
 
     .navbar.active ul {
+        opacity: 1;
         transform: scaleY(1);
     }
 }

@@ -26,6 +26,7 @@ body {
     color: white;
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 ul,
@@ -56,7 +57,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #313131;
+    background-color: #414141;
     border: 2px solid #212121;
     background-clip: content-box;
 }
@@ -100,6 +101,12 @@ body::-webkit-scrollbar-thumb:hover {
 .button:hover::before,
 .button:hover::after {
     height: 50%;
+}
+
+footer div{
+    margin: auto;
+    padding: 2rem 0;
+    max-width: fit-content;
 }
 
 @media screen and (max-width: 75em) {
