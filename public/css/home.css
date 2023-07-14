@@ -9,6 +9,7 @@
 }
 
 .home-wrapper {
+    --gap:10rem;
     display: flex;
     width: 100%;
     place-content: center;
@@ -128,7 +129,9 @@
 
 @media screen and (max-width: 75em) {
     .home-wrapper {
-        margin-top: 10vh;
+        --size:200px;
+        --gap: 20px;
+        margin-top: 0;
         place-items: center;
         flex-direction: column;
     }
@@ -138,6 +141,7 @@
     }
 
     .home-wrapper .home-img {
+        transform: translateY(0px);
         width: 200px;
         height: 200px;
     }
@@ -148,21 +152,12 @@
 }
 
 @media screen and (max-width: 32em) {
-    .home-wrapper {
-        gap: 2rem;
-    }
-
     .home-wrapper h1 {
         font-size: 48px;
     }
 
     .home-wrapper h2 {
         font-size: 16px;
-    }
-
-    .home-wrapper .home-img {
-        width: 100px;
-        height: 100px;
     }
 
     .home-wrapper>div:nth-child(1) {
