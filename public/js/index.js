@@ -10,6 +10,10 @@ const navOptions = {
   rootMargin: '-60% 0px -40% 0px',
 };
 
+const pageOptions = {
+  rootMargin: '-40% 0px -50% 0px',
+};
+
 //show nav background after scrolling past home
 const navObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
@@ -47,7 +51,7 @@ const navScrollObeserver = new IntersectionObserver((entries, observer) => {
       return;
     }
   });
-}, navOptions);
+}, pageOptions);
 
 //wait till load to observer to prevent wrong width values
 window.addEventListener('load', () => {
@@ -110,15 +114,24 @@ screenshots.forEach((screenshot) => {
 });
 
 //change image
-function changeInner() {
+//loading image for slower internet - W.I.P
+async function changeInner() {
+  modalNext.disabled = true
+  modalPrev.disabled = true
   if (currpage >= totalpage) {
     currpage = 0;
   } else if (currpage < 0) {
     currpage = totalpage - 1;
   }
+  const imagePromise = new Promise(resolve => {
+    modalImg.onload = resolve
+    modalImg.src = arr[currpage].img
+  })
+  await imagePromise;
   modalPage.innerText = `${currpage + 1}/${totalpage}`;
-  modalImg.src = arr[currpage].img;
   modalDesc.innerText = arr[currpage].desc;
+  modalNext.disabled = false
+  modalPrev.disabled = false
 }
 
 function changePage(direction) {
